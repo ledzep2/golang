@@ -1914,9 +1914,9 @@ var (
 )
 
 func (b *builder) cgo(p *Package, cgoExe, obj string, gccfiles []string, gxxfiles []string) (outGo, outObj []string, err error) {
-	if goos != toolGOOS {
-		return nil, nil, errors.New("cannot use cgo when compiling for a different operating system")
-	}
+	//if goos != toolGOOS {
+	//	return nil, nil, errors.New("cannot use cgo when compiling for a different operating system")
+	//}
 
 	cgoCPPFLAGS := stringList(envList("CGO_CPPFLAGS"), p.CgoCPPFLAGS)
 	cgoCFLAGS := stringList(envList("CGO_CFLAGS"), p.CgoCFLAGS)
